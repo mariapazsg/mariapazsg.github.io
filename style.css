@@ -1,5 +1,36 @@
 body{
-    background:red;
+    background:rgb(109, 109, 135);
     color: beige;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+}
+
+h1{
+    text-align: center;
+    font-size: 120px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+p{
+    text-align: center;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a{
+    color: beige;
+    font-size: 30px;
+    font-family:'Times New Roman', Times, serif;
+    text-align: auto;
+    text-decoration:dotted;
+}
+
+header{
+    text-align: center;
+    display: grid;
+
 }
