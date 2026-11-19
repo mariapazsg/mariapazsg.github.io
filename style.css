@@ -19,6 +19,8 @@ img{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
+    height: auto;
 }
 
 a{
@@ -40,7 +42,7 @@ h1 span{
 }
 
 p span{
-    color: rgb(105, 79, 250);
+    color: beige;
 }
 
 .alert{
@@ -48,5 +50,8 @@ p span{
 }
 
 .grid{
-   background: rgb(109, 109, 135);
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 24px;
+
 }
