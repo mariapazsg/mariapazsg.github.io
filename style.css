@@ -9,8 +9,9 @@ body{
 
 h1{
     text-align: center;
-    font-size: auto;
+    font-size: 120px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 }
 
 p{
@@ -26,7 +27,7 @@ img{
 a{
     color: beige;
     font-size: 30px;
-    font-family:'Times New Roman', Times, serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: auto;
     text-decoration:dotted;
 }
@@ -36,6 +37,7 @@ header{
     justify-content: space-between;
     align-items: baseline;
     grid-template-columns: auto auto;
+    font-size: 100px;
 
 }
 
