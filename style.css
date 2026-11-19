@@ -34,3 +34,11 @@ header{
     display: grid;
 
 }
+
+span{
+    color: rgb(255, 0, 0);
+}
+
+p span{
+    color: rgb(47, 30, 142);
+}
