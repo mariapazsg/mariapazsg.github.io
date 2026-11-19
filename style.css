@@ -36,13 +36,17 @@ header{
 }
 
 h1 span{
-    color: rgb(255, 0, 0);
+    color: rgb(255, 254, 250);
 }
 
 p span{
-    color: rgb(47, 30, 142);
+    color: rgb(105, 79, 250);
 }
 
 .alert{
-    color: aquamarine;
+    color: rgb(225, 215, 253);
+}
+
+.grid{
+   background: rgb(109, 109, 135);
 }
