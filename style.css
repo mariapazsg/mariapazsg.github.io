@@ -1,6 +1,6 @@
 body{
     background:rgb(109, 109, 135);
-    color: beige;
+    color: rgb(247, 243, 255);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     max-width: 1200px;
     margin: 0 auto;
@@ -37,7 +37,7 @@ header{
     justify-content: space-between;
     align-items: baseline;
     grid-template-columns: auto auto;
-    font-size: 100px;
+    font-size: 150px;
 
 }
 
@@ -58,4 +58,44 @@ p span{
    grid-template-columns: 1fr 1fr 1fr;
    gap: 24px;
 
+}
+
+.image-container{
+    width: 475px;
+    display: block;
+    margin:100px auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.image-container img{
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(109, 109, 135);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-text{
+    color: rgb(247, 243, 255);
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+}
+
+.image-container:hover overlay{
+    opacity: 1;
 }
