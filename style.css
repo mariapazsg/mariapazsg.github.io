@@ -2,14 +2,14 @@ body{
     background:rgb(109, 109, 135);
     color: beige;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 40px;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 10px;
 }
 
 h1{
     text-align: center;
-    font-size: 120px;
+    font-size: auto;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -19,8 +19,6 @@ p{
 
 img{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     width: 100%;
     height: auto;
 }
@@ -34,8 +32,10 @@ a{
 }
 
 header{
-    text-align: center;
     display: grid;
+    justify-content: space-between;
+    align-items: baseline;
+    grid-template-columns: auto auto;
 
 }
 
@@ -44,7 +44,7 @@ h1 span{
 }
 
 p span{
-    color: beige;
+    color: rgb(247, 243, 255);
 }
 
 .alert{
