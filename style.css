@@ -38,11 +38,8 @@ header{
     align-items: baseline;
     grid-template-columns: auto auto;
     font-size: 150px;
+    text-align: center;
 
-}
-
-h1 span{
-    color: rgb(255, 254, 250);
 }
 
 p span{
@@ -100,4 +97,8 @@ p span{
 
 .image-container:hover overlay{
     opacity: 1;
+}
+
+header span {
+    text-align: right;
 }
