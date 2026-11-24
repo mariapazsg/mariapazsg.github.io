@@ -3,17 +3,36 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Cooper Hewitt Heavy';
+    src: url('CooperHewitt-Heavy.otf') format('opentype');
+    font-style: normal;
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Cooper Hewitt Book';
+    src: url('CooperHewitt-Book.otf') format('opentype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+h2,
+p {
+    font-family: 'Cooper Hewitt Book', sans-serif;
+}
+
 .home-page {
     width: 100%;
     margin: 0;
     padding-inline: 10px;
     background: #ffffff;
     color: #000;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Cooper Hewitt Heavy', sans-serif;
 }
 
 body {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Cooper Hewitt Heavy', sans-serif;
 }
 
 .siteheadWrap {
@@ -27,17 +46,19 @@ body {
     display: block;
     flex: 0 0 auto;
     color: inherit;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Cooper Hewitt Heavy', sans-serif;
     text-decoration: none;
 }
 
 .siteheadWrap > .brand-link h1 {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: 10px;
     width: auto;
+    height: 60px;
     margin: 0;
     font-size: 100px;
+    line-height: 60px;
 }
 
 .siteheadWrap > .brand-link h1 img {
@@ -50,6 +71,7 @@ body {
 
 .siteheadWrap > .brand-link h1 span {
     font-size: 0.5em;
+    line-height: 1;
     white-space: nowrap;
 }
 
@@ -60,21 +82,79 @@ body {
 #topnav ul {
     display: flex;
     align-items: center;
+    min-height: 60px;
     gap: 24px;
     margin: 0;
     padding-inline: 24px;
     list-style: none;
 }
 
+#topnav a {
+    color: #000;
+    font-size: 20px;
+    line-height: 60px;
+    text-decoration: none;
+}
+
 .home-page a {
     color: #000;
-    font-family: Cambria, Cochin, Georgia, 'Times New Roman', serif;
+    font-family: 'Cooper Hewitt Book', sans-serif;
     font-size: 20px;
     text-decoration: none;
 }
 
 a {
-    font-family: Cambria, Cochin, Georgia, 'Times New Roman', serif;
+    font-family: 'Cooper Hewitt Book', sans-serif;
+}
+
+.project-page {
+    padding-inline: 24px;
+}
+
+.project-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 32px;
+    align-items: start;
+    margin-block: 40px;
+}
+
+.project-headings h1,
+.project-headings h2,
+.project-description p {
+    margin: 0;
+}
+
+.project-headings h1 {
+    margin-bottom: 20px;
+}
+
+.project-headings h2 {
+    font-size: 24px;
+}
+
+.project-description p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.project-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-block: 32px;
+}
+
+.project-images img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 700px) {
+    .project-intro {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
 }
 
 .grid {
@@ -192,7 +272,7 @@ a {
 
 .intro-link h1 {
     margin: 0;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Cooper Hewitt Heavy', sans-serif;
     font-size: clamp(48px, 10vw, 100px);
 }
 
@@ -206,7 +286,20 @@ a {
     margin-top: 3rem;
     padding: 1rem 24px;
     border-top: 1px solid currentColor;
-    font-family: Cambria, Cochin, Georgia, 'Times New Roman', serif;
+    font-family: 'Cooper Hewitt Book', sans-serif;
     font-size: 16px;
     text-align: center;
+}
+
+.font-credit {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.85em;
+}
+
+.intro-font-credit {
+    position: fixed;
+    right: 24px;
+    bottom: 16px;
+    left: 24px;
 }
