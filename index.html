@@ -129,6 +129,7 @@
     const carouselSlides = carouselTrack.querySelectorAll('.carousel-slide:not([aria-hidden="true"])');
     const carouselDuration = 95000;
     const carouselStep = carouselDuration / carouselSlides.length;
+    let carouselResumeTimer;
 
     document.querySelectorAll('.carousel-arrow').forEach((button) => {
         button.addEventListener('click', () => {
@@ -141,9 +142,13 @@
                 );
             }
 
+            animation.pause();
             const currentTime = Number(animation.currentTime) || 0;
             const direction = button.classList.contains('carousel-arrow--next') ? 1 : -1;
             animation.currentTime = (currentTime + direction * carouselStep + carouselDuration) % carouselDuration;
+
+            window.clearTimeout(carouselResumeTimer);
+            carouselResumeTimer = window.setTimeout(() => animation.play(), 2000);
         });
     });
 </script>

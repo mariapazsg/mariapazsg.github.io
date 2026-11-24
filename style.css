@@ -7,7 +7,7 @@
     width: 100%;
     margin: 0;
     padding-inline: 10px;
-    background: #fff;
+    background: #e70707;
     color: #000;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -176,8 +176,8 @@ a {
     line-height: 1;
 }
 
-.carousel-arrow--previous { left: 16px; }
-.carousel-arrow--next { right: 16px; }
+.carousel-arrow--previous { left: 0; }
+.carousel-arrow--next { right: 0; }
 
 .carousel-arrow:focus-visible {
     outline: 2px solid #000;
