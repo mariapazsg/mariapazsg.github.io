@@ -124,6 +124,7 @@ a {
 }
 
 .carousel {
+    position: relative;
     width: calc(100% + 20px);
     margin-inline: -10px;
     margin-bottom: 32px;
@@ -133,12 +134,12 @@ a {
 .carousel-track {
     display: flex;
     width: max-content;
-    animation: carousel-scroll 86s linear infinite;
+    animation: carousel-scroll 95s linear infinite;
 }
 
 .carousel-slide {
     display: block;
-    flex: 0 0 clamp(576px, 60vw, 1008px);
+    flex: 0 0 clamp(634px, 66vw, 1109px);
     aspect-ratio: 4 / 3;
     overflow: hidden;
 }
@@ -155,6 +156,32 @@ a {
 .carousel-slide:hover img,
 .carousel-slide:focus-visible img {
     filter: grayscale(0%);
+}
+
+.carousel-arrow {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    display: grid;
+    width: 52px;
+    height: 52px;
+    place-items: center;
+    transform: translateY(-50%);
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.85);
+    color: #000;
+    cursor: pointer;
+    font-size: 36px;
+    line-height: 1;
+}
+
+.carousel-arrow--previous { left: 16px; }
+.carousel-arrow--next { right: 16px; }
+
+.carousel-arrow:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 3px;
 }
 
 @keyframes carousel-scroll {

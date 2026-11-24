@@ -63,6 +63,8 @@
             <a class="carousel-slide" href="revolution.html" tabindex="-1" aria-hidden="true"><img src="images/tnrevolution.jpg" alt=""></a>
             <a class="carousel-slide" href="hebras.html" tabindex="-1" aria-hidden="true"><img src="images/tnmochimochi.jpg" alt=""></a>
         </div>
+        <button class="carousel-arrow carousel-arrow--previous" type="button" aria-label="Image précédente">‹</button>
+        <button class="carousel-arrow carousel-arrow--next" type="button" aria-label="Image suivante">›</button>
     </section>
 
     <div class="grid">
@@ -122,6 +124,29 @@
     </div> 
 </main>
 <footer class="site-footer"> © Maria Paz San Juan Gomez</footer>
+<script>
+    const carouselTrack = document.querySelector('.carousel-track');
+    const carouselSlides = carouselTrack.querySelectorAll('.carousel-slide:not([aria-hidden="true"])');
+    const carouselDuration = 95000;
+    const carouselStep = carouselDuration / carouselSlides.length;
+
+    document.querySelectorAll('.carousel-arrow').forEach((button) => {
+        button.addEventListener('click', () => {
+            let animation = carouselTrack.getAnimations()[0];
+
+            if (!animation) {
+                animation = carouselTrack.animate(
+                    [{ transform: 'translateX(0)' }, { transform: 'translateX(-50%)' }],
+                    { duration: carouselDuration, iterations: Infinity }
+                );
+            }
+
+            const currentTime = Number(animation.currentTime) || 0;
+            const direction = button.classList.contains('carousel-arrow--next') ? 1 : -1;
+            animation.currentTime = (currentTime + direction * carouselStep + carouselDuration) % carouselDuration;
+        });
+    });
+</script>
 
 </body>
 </html>
