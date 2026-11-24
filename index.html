@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - porfolio workshop</title>
     <link rel="stylesheet" href="style.css">
-    
+    <script>
+        if (!new URLSearchParams(window.location.search).has('home')) {
+            window.location.replace('intro.html');
+        }
+    </script>
 </head>
 <body class="home-page">
     <header>

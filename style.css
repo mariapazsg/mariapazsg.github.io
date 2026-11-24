@@ -166,15 +166,17 @@ a {
 }
 
 .intro {
-    display: grid;
+    display: flex;
     min-height: 100vh;
-    place-items: center;
 }
 
 .intro-link {
     display: flex;
+    position: fixed;
+    inset: 0;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 24px;
     color: inherit;
     text-align: center;
