@@ -23,9 +23,16 @@ body {
     font-size: 50px;
 }
 
-.siteheadWrap > h1 {
-    display: flex;
+.siteheadWrap > .brand-link {
+    display: block;
     flex: 0 0 auto;
+    color: inherit;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+}
+
+.siteheadWrap > .brand-link h1 {
+    display: flex;
     align-items: center;
     gap: 10px;
     width: auto;
@@ -33,7 +40,7 @@ body {
     font-size: 100px;
 }
 
-.siteheadWrap > h1 img {
+.siteheadWrap > .brand-link h1 img {
     display: block;
     flex: 0 0 60px;
     width: 60px;
@@ -41,7 +48,7 @@ body {
     object-fit: contain;
 }
 
-.siteheadWrap > h1 span {
+.siteheadWrap > .brand-link h1 span {
     font-size: 0.5em;
     white-space: nowrap;
 }
@@ -185,6 +192,7 @@ a {
 
 .intro-link h1 {
     margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: clamp(48px, 10vw, 100px);
 }
 
