@@ -73,6 +73,11 @@ body {
     font-size: 0.5em;
     line-height: 1;
     white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.siteheadWrap > .brand-link h1 span:hover {
+    color: #ff0000;
 }
 
 #topnav {
@@ -94,6 +99,11 @@ body {
     font-size: 20px;
     line-height: 60px;
     text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+#topnav a:hover {
+    color: #ff0000;
 }
 
 .home-page a {
@@ -268,6 +278,13 @@ a {
     color: inherit;
     text-align: center;
     text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.intro-link:has(h1:hover),
+.intro-link:has(img:hover) {
+    background-color: #ff0000;
+    color: #ffffff;
 }
 
 .intro-link h1 {
