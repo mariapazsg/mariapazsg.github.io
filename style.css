@@ -124,7 +124,6 @@ a {
 }
 
 .carousel {
-    position: relative;
     width: calc(100% + 20px);
     margin-inline: -10px;
     margin-bottom: 32px;
@@ -156,32 +155,6 @@ a {
 .carousel-slide:hover img,
 .carousel-slide:focus-visible img {
     filter: grayscale(0%);
-}
-
-.carousel-arrow {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    display: grid;
-    width: 52px;
-    height: 52px;
-    place-items: center;
-    transform: translateY(-50%);
-    border: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.85);
-    color: #000;
-    cursor: pointer;
-    font-size: 36px;
-    line-height: 1;
-}
-
-.carousel-arrow--previous { left: 0; }
-.carousel-arrow--next { right: 0; }
-
-.carousel-arrow:focus-visible {
-    outline: 2px solid #000;
-    outline-offset: 3px;
 }
 
 @keyframes carousel-scroll {
