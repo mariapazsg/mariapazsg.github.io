@@ -96,6 +96,13 @@ body {
     text-decoration: none;
 }
 
+#topnav a:hover,
+#topnav a:focus-visible,
+.siteheadWrap > .brand-link:hover h1 span,
+.siteheadWrap > .brand-link:focus-visible h1 span {
+    color: #ff0000;
+}
+
 .home-page a {
     color: #000;
     font-family: 'Cooper Hewitt Book', sans-serif;
